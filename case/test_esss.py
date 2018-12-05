@@ -51,8 +51,9 @@ class Esss(unittest.TestCase):
         url = 'http://' + self.host + api + str(self.open_id) + '/' + str(self.timestamp) + '/' + digest + '/' + self.msg_id
         request = requests.post(url=url, data=data)
         request_data = json.loads(request.text)
-        # response = json.loads(request_data['response_data'])
-        # self.assertEqual(response['id'], str(self.p.get_storehouse_changeId()))
+        response = json.loads(request_data['response_data'])
+        print(response)
+        self.assertEqual(response['id'], str(self.p.get_storehouse_changeId()))
         try:
             self.assertEqual(request.status_code, 200)
             self.assertEqual(request_data['return_code'], '0')
