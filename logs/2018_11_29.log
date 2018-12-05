@@ -1,0 +1,681 @@
+2018-11-29 09:03:36,839 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 09:03:37,181 logger.py [line:37] INFO 调拨单审批成功
+2018-11-29 09:03:37,259 logger.py [line:37] INFO 获取调拨单记录成功
+2018-11-29 09:03:37,359 logger.py [line:37] INFO 新增库存盘点单成功
+2018-11-29 09:03:37,468 logger.py [line:37] INFO 审核库存盘点单成功
+2018-11-29 09:05:41,811 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 09:05:41,948 logger.py [line:37] INFO 调拨单审批成功
+2018-11-29 09:05:41,998 logger.py [line:37] INFO 获取调拨单记录成功
+2018-11-29 09:05:42,052 logger.py [line:37] INFO 新增库存盘点单成功
+2018-11-29 09:05:42,079 logger.py [line:37] INFO 审核库存盘点单成功
+2018-11-29 09:50:03,537 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 09:50:04,016 logger.py [line:37] INFO 调拨单审批成功
+2018-11-29 09:50:04,141 logger.py [line:37] INFO 获取调拨单记录成功
+2018-11-29 09:50:04,274 logger.py [line:37] INFO 新增库存盘点单成功
+2018-11-29 09:50:04,403 logger.py [line:37] INFO 审核库存盘点单成功
+2018-11-29 09:52:34,745 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 09:53:30,386 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 09:54:49,872 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 09:54:59,516 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 09:56:03,946 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 09:56:42,785 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 11:17:00,513 logger.py [line:43] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 11:25:25,197 logger.py [line:43] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 11:25:25,197 logger.py [line:43] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 13:19:40,680 logger.py [line:43] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 13:19:40,681 logger.py [line:43] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 13:19:54,353 logger.py [line:43] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 13:19:54,354 logger.py [line:43] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 13:19:54,567 logger.py [line:37] INFO 审批兑付货物成功
+2018-11-29 13:24:37,619 logger.py [line:43] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 13:24:37,619 logger.py [line:43] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 13:24:37,747 logger.py [line:37] INFO 审批兑付货物成功
+2018-11-29 13:24:40,797 logger.py [line:37] INFO 兑换货物数据查询成功
+2018-11-29 13:25:42,896 logger.py [line:43] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 13:25:42,896 logger.py [line:43] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 13:25:43,034 logger.py [line:37] INFO 审批兑付货物成功
+2018-11-29 13:25:43,096 logger.py [line:43] ERROR 兑换货物单据查询失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 13:25:43,097 logger.py [line:43] ERROR 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "CUS000001"
+### The error may exist in file [/home/iorder_appsvr/iMobii-Appsvr-2.0.0/web/WEB-INF/classes/com/fh/iasp/app/esss/mvc/sqlmap/mybatis/esss_product_and_change_swap_mapping.xml]
+### The error may involve com.fh.iasp.app.esss.api.v1.mapper.EsssExchangeProductMapper.loadExchangeProductSwapDataById-Inline
+### The error occurred while setting parameters
+### SQL: SELECT  so. ID,  so.status,  so.confirm_status,  so.is_enable,  so.exchange_no,  to_char(   so.submit_time,   'yyyy-mm-dd hh24:mi:ss'  ) AS submit_time,  sd.id as submit_dept_id,     sd. code AS submit_dept_code,  sd. NAME AS submit_dept_name,  sd.source_code AS dept_source_code,  so.cm_id,  bcc.code as cm_code,  bcc.name as cm_name,  bcc.source_code as cm_source_code,  so.business_id,  so1.name as business_name,  so.prod_id,  bpp.code as prod_code,  bpp.name as prod_name,  bpp.source_code as prod_source_code,  so.num as input_num,  so.input_unit,  bpu.unit_name as input_unit_name,  so.base_unit_num as base_num,  so.base_unit,  bpu2.unit_name as base_unit_name,  so.confirm_emp_id,  se2.code as confirm_emp_code,  se2.name as confirm_emp_name,  se2.source_code as confirm_source_code,  so.reason,  so.remark,  so.visit_implement_id,  so.cost_price,  so.cost_amount,  so.car_id,  es.code as car_code,  es.name as car_name,  so.creator_id,  se4.code as creator_code,    se4.name as creator_name,  to_char(   so.create_time,   'yyyy-mm-dd hh24:mi:ss'  ) AS create_time,  so.modifyier_id,  se5.code as modifyier_code,    se5.name as modifyier_name,  to_char(   so.modify_time,   'yyyy-mm-dd hh24:mi:ss'  ) AS modify_time,  so.activity_id,  so2.name as activity_name,     so.hc_status,  so.hc_id,  so3.exchange_no as hc_no,  bpp.pictures as product_pictures,  bpp.spec as product_spec FROM  esss_car_exchange_product_bas so left JOIN bas_pd_product bpp on so.prod_id=bpp.id left JOIN bas_pd_unit bpu on so.input_unit=bpu.id left JOIN bas_pd_unit bpu2 on so.base_unit=bpu2.id left join bas_cm_customer bcc on so.cm_id=bcc.id left JOIN sys_employee se2 ON so.confirm_emp_id = se2. ID LEFT JOIN esss_storehouse es on so.car_id=es.id left JOIN sys_employee se4 ON so.creator_id = se4. ID left JOIN sys_department sd ON se4.dept_id = sd. ID left JOIN sys_employee se5 ON so.modifyier_id = se5. ID left join esss_car_exchange_pd_business so1 on so1.id=so.business_id left join esss_car_exchange_pd_activity so2 on so2.id=so.activity_id left join esss_car_exchange_product_bas so3 on so3.id=so.hc_id   where 1=1                             and so.status = ?::VARCHAR                           and so.cm_id = ?::BIGINT                                                                                 order by so.create_time,so.id                LIMIT 1000
+### Cause: org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "CUS000001"
+; SQL []; ERROR: invalid input syntax for integer: "CUS000001"; nested exception is org.postgresql.util.PSQLException: ERROR: invalid input syntax for integer: "CUS000001"
+2018-11-29 13:26:13,090 logger.py [line:43] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 13:26:13,091 logger.py [line:43] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 13:26:13,159 logger.py [line:37] INFO 审批兑付货物成功
+2018-11-29 13:26:13,290 logger.py [line:37] INFO 兑换货物数据查询成功
+2018-11-29 14:35:24,558 logger.py [line:37] INFO 车辆盘点单新增成功
+2018-11-29 14:38:42,172 logger.py [line:37] INFO 车辆盘点单新增成功
+2018-11-29 14:47:37,376 logger.py [line:43] ERROR 车辆盘点单审核失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 14:47:37,377 logger.py [line:43] ERROR 该车辆盘点单数据已被审核！
+2018-11-29 14:57:25,629 logger.py [line:37] INFO 车辆盘点单新增成功
+2018-11-29 14:57:25,704 logger.py [line:37] INFO 车辆盘点单审核成功
+2018-11-29 15:07:03,164 logger.py [line:37] INFO 车辆盘点单新增成功
+2018-11-29 15:11:05,045 logger.py [line:37] INFO 车辆盘点单新增成功
+2018-11-29 15:31:10,096 logger.py [line:37] INFO 其他出库单查询成功
+2018-11-29 15:34:12,661 logger.py [line:37] INFO 其他出库单查询成功
+2018-11-29 15:45:49,425 logger.py [line:37] INFO 其他出库单新增成功
+2018-11-29 16:56:29,850 logger.py [line:37] INFO 其他出库单新增成功
+2018-11-29 16:58:20,313 logger.py [line:37] INFO 其他出库单新增成功
+2018-11-29 16:58:20,387 logger.py [line:37] INFO 其他出库单审批成功
+2018-11-29 18:48:47,457 logger.py [line:37] INFO 其他出库单查询成功
+2018-11-29 18:51:19,186 logger.py [line:37] INFO 其他出库单查询成功
+2018-11-29 18:51:19,610 logger.py [line:37] INFO 其他出库单查询成功
+2018-11-29 19:01:10,165 logger.py [line:37] INFO 其他出库单查询成功
+2018-11-29 19:01:10,355 logger.py [line:37] INFO 其他出库单新增成功
+2018-11-29 19:01:10,816 logger.py [line:37] INFO 其他出库单审批成功
+2018-11-29 19:06:26,479 logger.py [line:37] INFO 其他出库单查询成功
+2018-11-29 19:06:26,652 logger.py [line:37] INFO 其他出库单新增成功
+2018-11-29 19:06:26,770 logger.py [line:37] INFO 其他出库单审批成功
+2018-11-29 19:11:55,748 logger.py [line:37] INFO 旺店订单查询成功
+2018-11-29 19:12:07,750 logger.py [line:37] INFO 旺店订单查询成功
+2018-11-29 19:16:58,913 logger.py [line:37] INFO 旺店订单查询成功
+2018-11-29 19:17:01,020 logger.py [line:37] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 19:17:23,521 logger.py [line:37] INFO 其他出库单查询成功
+2018-11-29 19:17:23,785 logger.py [line:37] INFO 其他出库单新增成功
+2018-11-29 19:17:23,909 logger.py [line:37] INFO 其他出库单审批成功
+2018-11-29 19:17:24,289 logger.py [line:37] INFO 旺店订单查询成功
+2018-11-29 19:17:26,234 logger.py [line:37] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 19:19:17,841 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 19:19:18,088 logger.py [line:37] INFO 调拨单审批成功
+2018-11-29 19:19:18,160 logger.py [line:37] INFO 获取调拨单记录成功
+2018-11-29 19:19:18,257 logger.py [line:37] INFO 新增库存盘点单成功
+2018-11-29 19:19:18,348 logger.py [line:37] INFO 审核库存盘点单成功
+2018-11-29 19:19:18,724 logger.py [line:43] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 19:19:18,726 logger.py [line:43] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 19:19:18,848 logger.py [line:37] INFO 审批兑付货物成功
+2018-11-29 19:19:18,971 logger.py [line:37] INFO 兑换货物数据查询成功
+2018-11-29 19:19:19,254 logger.py [line:37] INFO 车辆盘点单新增成功
+2018-11-29 19:19:19,328 logger.py [line:37] INFO 车辆盘点单审核成功
+2018-11-29 19:19:19,874 logger.py [line:37] INFO 其他入库单查询成功
+2018-11-29 19:19:20,210 logger.py [line:37] INFO 其他入库单新增成功
+2018-11-29 19:19:20,264 logger.py [line:37] INFO 其他入库单审批成功
+2018-11-29 19:19:20,732 logger.py [line:37] INFO 其他出库单查询成功
+2018-11-29 19:19:20,903 logger.py [line:37] INFO 其他出库单新增成功
+2018-11-29 19:19:20,991 logger.py [line:37] INFO 其他出库单审批成功
+2018-11-29 19:19:21,376 logger.py [line:37] INFO 旺店订单查询成功
+2018-11-29 19:19:23,504 logger.py [line:37] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:00:54,729 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:00:54,963 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/stdorder/v1/queryStdomOrder/6180189707732890999/20181129200054/2f9ff0ef6668ee341dd03b9a59320cb1/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:00:55,220 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:00:55,223 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:00:55,715 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/stdsent/v1/queryStdomSent/6180189707732890999/20181129200054/e2ca4c6ed051bac10666af4b757f2f62/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:00:57,324 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:01:29,144 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:01:31,094 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:02:10,751 test_esss.py [line:58] INFO 新增调拨单成功
+2018-11-29 20:02:11,267 test_esss.py [line:83] INFO 调拨单审批成功
+2018-11-29 20:02:11,369 test_esss.py [line:104] INFO 获取调拨单记录成功
+2018-11-29 20:02:11,478 test_esss.py [line:136] INFO 新增库存盘点单成功
+2018-11-29 20:02:11,564 test_esss.py [line:157] INFO 审核库存盘点单成功
+2018-11-29 20:02:11,900 test_esss.py [line:192] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:02:11,900 test_esss.py [line:193] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:02:12,028 test_esss.py [line:215] INFO 审批兑付货物成功
+2018-11-29 20:02:12,146 test_esss.py [line:238] INFO 兑换货物数据查询成功
+2018-11-29 20:02:12,429 test_esss.py [line:269] INFO 车辆盘点单新增成功
+2018-11-29 20:02:12,514 test_esss.py [line:289] INFO 车辆盘点单审核成功
+2018-11-29 20:02:13,053 test_esss.py [line:311] INFO 其他入库单查询成功
+2018-11-29 20:02:13,415 test_esss.py [line:351] INFO 其他入库单新增成功
+2018-11-29 20:02:13,495 test_esss.py [line:372] INFO 其他入库单审批成功
+2018-11-29 20:02:14,053 test_esss.py [line:393] INFO 其他出库单查询成功
+2018-11-29 20:02:14,315 test_esss.py [line:432] INFO 其他出库单新增成功
+2018-11-29 20:02:14,424 test_esss.py [line:452] INFO 其他出库单审批成功
+2018-11-29 20:04:42,149 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:04:42,378 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:04:42,479 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:04:42,647 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:04:42,682 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:04:42,756 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:04:42,756 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:04:42,824 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:04:42,969 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:04:43,119 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:04:43,165 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:04:43,693 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:04:43,996 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:04:44,066 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:04:44,634 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:04:44,815 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:04:44,911 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:06:14,045 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:06:14,149 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:06:14,226 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:06:14,266 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:06:14,350 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:06:14,351 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:06:14,429 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:06:14,575 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:06:14,757 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:06:14,805 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:06:15,364 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:06:15,634 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:06:15,693 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:06:16,256 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:06:16,427 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:06:16,533 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:06:33,160 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:06:33,339 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:06:33,440 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:06:33,542 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:06:33,587 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:06:33,677 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:06:33,678 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:06:33,758 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:06:33,890 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:06:34,073 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:06:34,125 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:06:34,674 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:06:35,051 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:06:35,114 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:06:35,714 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:06:35,875 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:06:35,965 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:19:40,637 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:19:40,637 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:19:40,843 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:19:40,843 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:19:40,921 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:19:40,921 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:19:41,023 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:19:41,023 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:19:41,066 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:19:41,066 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:19:41,157 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:19:41,157 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:19:41,157 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:19:41,157 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:19:41,238 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:19:41,238 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:19:41,362 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:19:41,362 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:19:41,533 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:19:41,533 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:19:41,586 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:19:41,586 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:19:42,148 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:19:42,148 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:19:42,410 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:19:42,410 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:19:42,473 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:19:42,473 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:19:43,056 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:19:43,056 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:19:43,231 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:19:43,231 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:19:43,331 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:19:43,331 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:19:43,832 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:19:43,832 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:19:44,265 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:19:44,265 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:19:46,233 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:19:46,233 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:25:18,056 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:25:18,056 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:25:18,214 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:25:18,214 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:25:18,272 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:25:18,272 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:25:18,337 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:25:18,337 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:25:18,367 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:25:18,367 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:25:18,445 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:25:18,445 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:25:18,446 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:25:18,446 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:25:18,507 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:25:18,507 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:25:18,593 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:25:18,593 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:25:18,751 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:25:18,751 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:25:18,788 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:25:18,788 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:25:19,392 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:25:19,392 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:25:19,638 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:25:19,638 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:25:19,690 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:25:19,690 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:25:20,358 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:25:20,358 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:25:20,506 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:25:20,506 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:25:20,595 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:25:20,595 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:25:20,956 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:25:20,956 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:25:21,312 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:25:21,312 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:25:23,216 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:25:23,216 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:28:34,540 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:28:34,540 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:28:34,809 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:28:34,809 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:28:34,886 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:28:34,886 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:28:34,956 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:28:34,956 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:28:34,988 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:28:34,988 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:28:35,078 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:28:35,078 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:28:35,078 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:28:35,078 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:28:35,163 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:28:35,163 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:28:35,285 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:28:35,285 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:28:35,516 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:28:35,516 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:28:35,571 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:28:35,571 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:28:36,137 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:28:36,137 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:28:36,296 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:28:36,296 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:28:36,347 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:28:36,347 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:28:36,895 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:28:36,895 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:28:37,085 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:28:37,085 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:28:37,179 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:28:37,179 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:28:37,573 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:28:37,573 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:28:37,958 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:28:37,958 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:28:39,870 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:28:39,870 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:30:50,159 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:30:50,335 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:30:50,426 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:30:50,506 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:30:50,546 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:30:50,631 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:30:50,632 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:30:50,712 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:30:50,828 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:30:50,987 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:30:51,029 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:30:51,596 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:30:51,887 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:30:51,951 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:30:52,609 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:30:52,759 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:30:52,858 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:30:53,271 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:32:53,862 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:32:54,060 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:32:54,143 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:32:54,222 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:32:54,264 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:32:54,348 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:32:54,348 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:32:54,420 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:32:54,542 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:32:54,728 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:32:54,778 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:32:55,390 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:32:55,632 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:32:55,689 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:32:56,305 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:32:56,460 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:32:56,557 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:32:56,939 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:32:57,318 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:32:59,211 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:33:49,347 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:33:49,512 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:33:49,593 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:33:49,660 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:33:49,697 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:33:49,776 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:33:49,777 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:33:49,851 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:33:49,959 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:33:50,122 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:33:50,161 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:33:50,762 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:33:51,008 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:33:51,065 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:33:51,709 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:33:51,863 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:33:51,955 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:33:52,308 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:33:52,675 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:33:54,519 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:36:26,167 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:36:26,378 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:36:26,476 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:36:26,547 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:36:26,591 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:36:26,673 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:36:26,673 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:36:26,762 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:36:26,877 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:36:27,045 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:36:27,087 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:36:27,706 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:36:27,955 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:36:28,014 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:36:28,687 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:36:28,843 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:36:28,935 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:36:29,283 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:36:29,641 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:36:31,566 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:37:08,684 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:37:08,684 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:37:08,858 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:37:08,858 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:37:08,959 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:37:08,959 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:37:09,041 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:37:09,041 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:37:09,081 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:37:09,081 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:37:09,170 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:37:09,170 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:37:09,171 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:37:09,171 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:37:09,241 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:37:09,241 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:37:09,367 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:37:09,367 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:37:09,529 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:37:09,529 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:37:09,575 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:37:09,575 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:37:10,221 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:37:10,221 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:37:10,479 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:37:10,479 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:37:10,534 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:37:10,534 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:37:11,204 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:37:11,204 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:37:11,375 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:37:11,375 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:37:11,460 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:37:11,460 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:37:11,808 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:37:11,808 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:37:12,178 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:37:12,178 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:37:14,080 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:37:14,080 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:38:55,979 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:55,979 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,159 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssStoreHouseChange/v1/addEsssStoreHouseChange/6180189707732890999/20181129203855/7c205f89d79843e0a97cbeb36fd25452/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,159 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssStoreHouseChange/v1/addEsssStoreHouseChange/6180189707732890999/20181129203855/7c205f89d79843e0a97cbeb36fd25452/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,214 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:38:56,214 test_esss.py [line:59] INFO 新增调拨单成功
+2018-11-29 20:38:56,222 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,222 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,378 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssStoreHouseChange/v1/verifyEsssStoreHouseChange/6180189707732890999/20181129203855/02d2a944de740b29c3d84aeafb324930/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,378 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssStoreHouseChange/v1/verifyEsssStoreHouseChange/6180189707732890999/20181129203855/02d2a944de740b29c3d84aeafb324930/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,381 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:38:56,381 test_esss.py [line:84] INFO 调拨单审批成功
+2018-11-29 20:38:56,392 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,392 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,422 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssStoreHouseChange/v1/queryEsssStoreHouseChange/6180189707732890999/20181129203855/cf33549d3688dd09d1c2446318df44bc/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,422 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssStoreHouseChange/v1/queryEsssStoreHouseChange/6180189707732890999/20181129203855/cf33549d3688dd09d1c2446318df44bc/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,460 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:38:56,460 test_esss.py [line:105] INFO 获取调拨单记录成功
+2018-11-29 20:38:56,464 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,464 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,529 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esss_inventory/v1/addEsssInventory/6180189707732890999/20181129203855/aab953022d31f8135813422c13c7aab0/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,529 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esss_inventory/v1/addEsssInventory/6180189707732890999/20181129203855/aab953022d31f8135813422c13c7aab0/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,531 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:38:56,531 test_esss.py [line:137] INFO 新增库存盘点单成功
+2018-11-29 20:38:56,536 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,536 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,561 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esss_inventory/v1/verifyEsssInventory/6180189707732890999/20181129203855/b56be12e4199406e7cc476f7eeb4bfb9/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,561 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esss_inventory/v1/verifyEsssInventory/6180189707732890999/20181129203855/b56be12e4199406e7cc476f7eeb4bfb9/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,562 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:38:56,562 test_esss.py [line:158] INFO 审核库存盘点单成功
+2018-11-29 20:38:56,566 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,566 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,626 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssExChangeProduct/v1/addEsssExChangeProduct/6180189707732890999/20181129203855/5fa9bf3dd21f1e9a70c6313853046e35/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,626 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssExChangeProduct/v1/addEsssExChangeProduct/6180189707732890999/20181129203855/5fa9bf3dd21f1e9a70c6313853046e35/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,638 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:38:56,638 test_esss.py [line:193] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:38:56,638 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:38:56,638 test_esss.py [line:194] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:38:56,645 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,645 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,698 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssExChangeProduct/v1/verifyEsssExChangeProduct/6180189707732890999/20181129203855/58226c2ea6bbb87225d17d1cd3cf89a2/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,698 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssExChangeProduct/v1/verifyEsssExChangeProduct/6180189707732890999/20181129203855/58226c2ea6bbb87225d17d1cd3cf89a2/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,704 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:38:56,704 test_esss.py [line:216] INFO 审批兑付货物成功
+2018-11-29 20:38:56,712 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,712 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,756 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssExChangeProduct/v1/queryEsssExChangeProduct/6180189707732890999/20181129203855/406e7044955e5d52089602a50537c94d/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,756 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssExChangeProduct/v1/queryEsssExChangeProduct/6180189707732890999/20181129203855/406e7044955e5d52089602a50537c94d/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,802 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:38:56,802 test_esss.py [line:239] INFO 兑换货物数据查询成功
+2018-11-29 20:38:56,805 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,805 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:56,981 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esss_car_inventory/v1/addEsssCarInventory/6180189707732890999/20181129203855/b7e026369784d1d0e119e64365eb74ca/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,981 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esss_car_inventory/v1/addEsssCarInventory/6180189707732890999/20181129203855/b7e026369784d1d0e119e64365eb74ca/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:56,999 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:38:56,999 test_esss.py [line:270] INFO 车辆盘点单新增成功
+2018-11-29 20:38:57,012 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:57,012 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:57,048 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esss_car_inventory/v1/verifyEsssCarInventory/6180189707732890999/20181129203855/f3c2bbc5bf9b16ac9eb6b0f8538a1eaa/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:57,048 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esss_car_inventory/v1/verifyEsssCarInventory/6180189707732890999/20181129203855/f3c2bbc5bf9b16ac9eb6b0f8538a1eaa/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:57,050 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:38:57,050 test_esss.py [line:290] INFO 车辆盘点单审核成功
+2018-11-29 20:38:57,057 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:57,057 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:57,201 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssInOther/v1/queryInOtherOrder/6180189707732890999/20181129203855/4e5fc37081173f5d5ab0949b843aff91/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:57,201 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssInOther/v1/queryInOtherOrder/6180189707732890999/20181129203855/4e5fc37081173f5d5ab0949b843aff91/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:57,670 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:38:57,670 test_esss.py [line:312] INFO 其他入库单查询成功
+2018-11-29 20:38:57,673 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:57,673 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:57,933 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssInOther/v1/addInOtherOrder/6180189707732890999/20181129203855/f17e32bef51cbf6efce36bb2ebabee15/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:57,933 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssInOther/v1/addInOtherOrder/6180189707732890999/20181129203855/f17e32bef51cbf6efce36bb2ebabee15/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:57,935 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:38:57,935 test_esss.py [line:352] INFO 其他入库单新增成功
+2018-11-29 20:38:57,942 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:57,942 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:57,996 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssInOther/v1/verifyInOtherOrder/6180189707732890999/20181129203855/b05a9ba86489f314c12d84e7e526656a/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:57,996 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssInOther/v1/verifyInOtherOrder/6180189707732890999/20181129203855/b05a9ba86489f314c12d84e7e526656a/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:57,999 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:38:57,999 test_esss.py [line:373] INFO 其他入库单审批成功
+2018-11-29 20:38:58,009 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:58,009 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:58,163 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssOutOther/v1/queryOutOtherOrder/6180189707732890999/20181129203855/4e5fc37081173f5d5ab0949b843aff91/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:58,163 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssOutOther/v1/queryOutOtherOrder/6180189707732890999/20181129203855/4e5fc37081173f5d5ab0949b843aff91/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:58,659 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:38:58,659 test_esss.py [line:394] INFO 其他出库单查询成功
+2018-11-29 20:38:58,661 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:58,661 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:58,823 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssOutOther/v1/addOutOtherOrder/6180189707732890999/20181129203855/92cb9103d9109822524a8f018e55c99b/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:58,823 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssOutOther/v1/addOutOtherOrder/6180189707732890999/20181129203855/92cb9103d9109822524a8f018e55c99b/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:58,826 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:38:58,826 test_esss.py [line:433] INFO 其他出库单新增成功
+2018-11-29 20:38:58,836 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:58,836 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:58,917 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssOutOther/v1/verifyOutOtherOrder/6180189707732890999/20181129203855/b186dfdf1329b474904da5ff53758ff5/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:58,917 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/esssOutOther/v1/verifyOutOtherOrder/6180189707732890999/20181129203855/b186dfdf1329b474904da5ff53758ff5/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:58,918 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:38:58,918 test_esss.py [line:453] INFO 其他出库单审批成功
+2018-11-29 20:38:58,924 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:58,924 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:59,106 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/stdcarsle/v2/queryCarSaleOrder/6180189707732890999/20181129203855/d3d4c57207f20b711692edf398d1b9ea/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:59,106 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/stdcarsle/v2/queryCarSaleOrder/6180189707732890999/20181129203855/d3d4c57207f20b711692edf398d1b9ea/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:59,282 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:38:59,282 test_esss.py [line:474] INFO 车销单数据查询成功
+2018-11-29 20:38:59,285 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:59,285 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:59,415 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/stdorder/v1/queryStdomOrder/6180189707732890999/20181129203855/000ca10af885d070608cfc6786203770/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:59,415 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/stdorder/v1/queryStdomOrder/6180189707732890999/20181129203855/000ca10af885d070608cfc6786203770/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:59,645 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:38:59,645 test_order.py [line:44] INFO 旺店订单查询成功
+2018-11-29 20:38:59,648 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:59,648 connectionpool.py [line:207] DEBUG Starting new HTTP connection (1): 172.31.3.231
+2018-11-29 20:38:59,912 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/stdsent/v1/queryStdomSent/6180189707732890999/20181129203855/0eea0585fc53bcb9550a8bd305dc02f6/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:38:59,912 connectionpool.py [line:395] DEBUG http://172.31.3.231:6020 "POST /api/stdsent/v1/queryStdomSent/6180189707732890999/20181129203855/0eea0585fc53bcb9550a8bd305dc02f6/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-29 20:39:01,507 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:39:01,507 test_order.py [line:65] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:40:26,303 logger.py [line:37] INFO 新增调拨单成功
+2018-11-29 20:40:26,505 logger.py [line:37] INFO 调拨单审批成功
+2018-11-29 20:40:26,614 logger.py [line:37] INFO 获取调拨单记录成功
+2018-11-29 20:40:26,696 logger.py [line:37] INFO 新增库存盘点单成功
+2018-11-29 20:40:26,732 logger.py [line:37] INFO 审核库存盘点单成功
+2018-11-29 20:40:26,817 logger.py [line:43] ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:40:26,818 logger.py [line:43] ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:40:26,899 logger.py [line:37] INFO 审批兑付货物成功
+2018-11-29 20:40:27,011 logger.py [line:37] INFO 兑换货物数据查询成功
+2018-11-29 20:40:27,192 logger.py [line:37] INFO 车辆盘点单新增成功
+2018-11-29 20:40:27,244 logger.py [line:37] INFO 车辆盘点单审核成功
+2018-11-29 20:40:27,918 logger.py [line:37] INFO 其他入库单查询成功
+2018-11-29 20:40:28,176 logger.py [line:37] INFO 其他入库单新增成功
+2018-11-29 20:40:28,233 logger.py [line:37] INFO 其他入库单审批成功
+2018-11-29 20:40:28,909 logger.py [line:37] INFO 其他出库单查询成功
+2018-11-29 20:40:29,073 logger.py [line:37] INFO 其他出库单新增成功
+2018-11-29 20:40:29,151 logger.py [line:37] INFO 其他出库单审批成功
+2018-11-29 20:40:29,517 logger.py [line:37] INFO 车销单数据查询成功
+2018-11-29 20:40:29,858 logger.py [line:37] INFO 旺店订单查询成功
+2018-11-29 20:40:31,727 logger.py [line:37] INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:41:50,578 logger.py INFO 新增调拨单成功
+2018-11-29 20:41:50,753 logger.py INFO 调拨单审批成功
+2018-11-29 20:41:50,835 logger.py INFO 获取调拨单记录成功
+2018-11-29 20:41:50,914 logger.py INFO 新增库存盘点单成功
+2018-11-29 20:41:50,964 logger.py INFO 审核库存盘点单成功
+2018-11-29 20:41:51,065 logger.py ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+
+2018-11-29 20:41:51,066 logger.py ERROR A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:41:51,143 logger.py INFO 审批兑付货物成功
+2018-11-29 20:41:51,246 logger.py INFO 兑换货物数据查询成功
+2018-11-29 20:41:51,449 logger.py INFO 车辆盘点单新增成功
+2018-11-29 20:41:51,515 logger.py INFO 车辆盘点单审核成功
+2018-11-29 20:41:52,198 logger.py INFO 其他入库单查询成功
+2018-11-29 20:41:52,488 logger.py INFO 其他入库单新增成功
+2018-11-29 20:41:52,547 logger.py INFO 其他入库单审批成功
+2018-11-29 20:41:53,231 logger.py INFO 其他出库单查询成功
+2018-11-29 20:41:53,537 logger.py INFO 其他出库单新增成功
+2018-11-29 20:41:53,637 logger.py INFO 其他出库单审批成功
+2018-11-29 20:41:54,161 logger.py INFO 车销单数据查询成功
+2018-11-29 20:41:54,543 logger.py INFO 旺店订单查询成功
+2018-11-29 20:41:56,454 logger.py INFO 订单发货（旺店发货）数据查询成功
+2018-11-29 20:44:45,071 logger.py INFO 新增调拨单成功
+2018-11-29 20:44:45,297 logger.py INFO 调拨单审批成功
+2018-11-29 20:44:45,395 logger.py INFO 获取调拨单记录成功
+2018-11-29 20:44:45,497 logger.py INFO 新增库存盘点单成功
+2018-11-29 20:44:45,538 logger.py INFO 审核库存盘点单成功
+2018-11-29 20:44:45,630 logger.py ERROR 兑换货物单据新增失败:'1' != '0'
+- 1
++ 0
+,return_msg:A10086中柠檬茶库存不足！不能兑换
+2018-11-29 20:44:45,714 logger.py INFO 审批兑付货物成功
+2018-11-29 20:44:45,858 logger.py INFO 兑换货物数据查询成功
+2018-11-29 20:44:46,032 logger.py INFO 车辆盘点单新增成功
+2018-11-29 20:44:46,143 logger.py INFO 车辆盘点单审核成功
+2018-11-29 20:44:46,851 logger.py INFO 其他入库单查询成功
+2018-11-29 20:44:47,103 logger.py INFO 其他入库单新增成功
+2018-11-29 20:44:47,171 logger.py INFO 其他入库单审批成功
+2018-11-29 20:44:47,891 logger.py INFO 其他出库单查询成功
+2018-11-29 20:44:48,049 logger.py INFO 其他出库单新增成功
+2018-11-29 20:44:48,171 logger.py INFO 其他出库单审批成功
+2018-11-29 20:44:48,550 logger.py INFO 车销单数据查询成功
+2018-11-29 20:44:48,957 logger.py INFO 旺店订单查询成功
+2018-11-29 20:44:50,766 logger.py INFO 订单发货（旺店发货）数据查询成功

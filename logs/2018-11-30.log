@@ -1,0 +1,12 @@
+2018-11-30 09:38:37,698 connectionpool.py [207] Starting new HTTP connection (1): 172.31.3.231
+2018-11-30 09:38:37,890 connectionpool.py [395] http://172.31.3.231:6020 "POST /api/stdorder/v1/queryStdomOrder/6180189707732890999/20181130093837/4115ecbd73fb93ba0b54f658f025d6f9/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-30 09:38:38,138 test_order.py [45] 旺店订单查询成功
+2018-11-30 09:38:38,140 connectionpool.py [207] Starting new HTTP connection (1): 172.31.3.231
+2018-11-30 09:38:38,499 connectionpool.py [395] http://172.31.3.231:6020 "POST /api/stdsent/v1/queryStdomSent/6180189707732890999/20181130093837/00ac46124dc68feff89940b79b3114e5/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-30 09:38:40,114 test_order.py [66] 订单发货（旺店发货）数据查询成功
+2018-11-30 09:43:40,817 connectionpool.py [207] Starting new HTTP connection (1): 172.31.3.231
+2018-11-30 09:43:40,994 connectionpool.py [395] http://172.31.3.231:6020 "POST /api/stdorder/v1/queryStdomOrder/6180189707732890999/20181130094340/8bb1ccd8c465497df2325c76052d1a83/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-30 09:43:41,224 test_order.py [45] 旺店订单查询成功
+2018-11-30 09:43:41,227 connectionpool.py [207] Starting new HTTP connection (1): 172.31.3.231
+2018-11-30 09:43:41,582 connectionpool.py [395] http://172.31.3.231:6020 "POST /api/stdsent/v1/queryStdomSent/6180189707732890999/20181130094340/40b7d274efec319d7572994bb6aee17d/KAIKAI123456 HTTP/1.1" 200 None
+2018-11-30 09:43:43,164 test_order.py [66] 订单发货（旺店发货）数据查询成功

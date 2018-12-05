@@ -1,0 +1,58 @@
+# 查询调拨单
+queryEsssStoreHouseChange: /api/esssStoreHouseChange/v1/queryEsssStoreHouseChange/
+
+# 新增调拨单
+addEsssStoreHouseChange: /api/esssStoreHouseChange/v1/addEsssStoreHouseChange/
+
+# 审批调拨单
+verifyEsssStoreHouseChange: /api/esssStoreHouseChange/v1/verifyEsssStoreHouseChange/
+
+# 新增库存盘点单
+addEsssInventory: /api/esss_inventory/v1/addEsssInventory/
+
+# 审核库存盘点单
+verifyEsssInventory: /api/esss_inventory/v1/verifyEsssInventory/
+
+# 新增兑换货物
+addEsssExChangeProduct: /api/esssExChangeProduct/v1/addEsssExChangeProduct/
+
+# 审批兑换货物
+verifyEsssExChangeProduct: /api/esssExChangeProduct/v1/verifyEsssExChangeProduct/
+
+# 查询兑换货物数据
+queryEsssExChangeProduct: /api/esssExChangeProduct/v1/queryEsssExChangeProduct/
+
+# 新增车辆盘点单
+addEsssCarInventory: /api/esss_car_inventory/v1/addEsssCarInventory/
+
+# 审批车辆盘点单
+verifyEsssCarInventory: /api/esss_car_inventory/v1/verifyEsssCarInventory/
+
+# 查询其他入库单
+queryInOtherOrder: /api/esssInOther/v1/queryInOtherOrder/
+
+# 新增其他入库单
+addInOtherOrder: /api/esssInOther/v1/addInOtherOrder/
+
+# 审批其他入库单
+verifyInOtherOrder: /api/esssInOther/v1/verifyInOtherOrder/
+
+# 查询其他出库单
+queryOutOtherOrder: /api/esssOutOther/v1/queryOutOtherOrder/
+
+# 新增其他出库单
+addOutOtherOrder: /api/esssOutOther/v1/addOutOtherOrder/
+
+# 审批其他出库单
+verifyOutOtherOrder: /api/esssOutOther/v1/verifyOutOtherOrder/
+
+# 查询旺店订单
+queryStdomOrder: /api/stdorder/v1/queryStdomOrder/
+
+# 查询订单(旺店发货)发货数据
+queryStdomSent: /api/stdsent/v1/queryStdomSent/
+
+# 查询车销单数据
+queryCarSaleOrder: /api/stdcarsle/v2/queryCarSaleOrder/
+
+

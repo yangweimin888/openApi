@@ -1,0 +1,14 @@
+# 数据库地址
+host: 172.31.3.235
+
+# 端口
+port: 5432
+
+# 用户
+user: postgres
+
+# 密码
+password: FHuma025
+
+# 数据库名称
+database: u8100630123350000887
