@@ -5,25 +5,18 @@
 import json
 import requests
 import unittest
-from common.logger import Log
-from config.get_tenantParm import tenant_Parm
-from config.get_ApiParm import ApiParm
-from common.get_timestamp import time_stamp
-from common.get_digest import diggest_data
+from common.assert_equal import AssertEqual
+from common.common_method import CommonMethod
 from common.pgsql_connect import PgsqlUtil
-from common.get_localtime import get_local_day, get_local_min
+from config.get_parm import GetParm
 
 
 class Order(unittest.TestCase):
-    log = Log()
-    host = tenant_Parm()['host']
-    open_id = tenant_Parm()['open_id']
-    timestamp = time_stamp()
-    msg_id = tenant_Parm()['msg_id']
-    local_day = get_local_day()
-    local_min = get_local_min()
+    local_day = CommonMethod().get_local_day()
+    local_min = CommonMethod().get_local_min()
     p = PgsqlUtil()
-    Api = ApiParm()
+    Api = GetParm().getApiParm()
+
 
     def test_01(self):
         """查询旺店订单"""
@@ -31,42 +24,35 @@ class Order(unittest.TestCase):
             'page_number': '1',
             'order_status': '0'
         })
-
-        api = self.Api['queryStdomOrder']
-        digest = diggest_data(data, self.timestamp)
-        url = 'http://' + self.host + api + str(self.open_id) + '/' + str(self.timestamp) + '/' + digest + '/' + self.msg_id
-        request = requests.post(url=url, data=data)
-        request_data = json.loads(request.text)
-        # response = json.loads(request_data['response_data'])
-        try:
-            self.assertEqual(request.status_code, 200)
-            self.assertEqual(request_data['return_code'], '0')
-            self.log.info('旺店订单查询成功')
-        except Exception as e:
-            self.log.error('旺店订单查询失败:%s' % e)
-            self.log.error(request_data['return_msg'])
+        url = CommonMethod().geturl(data, 'queryStdomOrder')
+        request = requests.post(url,data)
+        AssertEqual().query_assert_equal(request, '旺店订单')
 
 
     def test_02(self):
-        """查询订单发货(旺店发货)的数据"""
+        """新增调拨单"""
         data = json.dumps({
-            'page_number': '1',
-            'status': '1'
+            'date': self.local_day,
+            'creator_id': self.p.get_creator_id(),
+            'emp_code': self.p.get_emp_code(),
+            'from_storehouse_code': self.p.from_storehouse_code(),
+            'to_storehouse_code': self.p.to_storehouse_code(),
+            'products': [{
+                'enable_num': 2,
+                'input_unit': self.p.get_input_unit('ck002'),
+                'prod_id': self.p.get_pd_id('ck002'),
+                'prod_code': self.p.get_pd_code('ck002')
+            }]
         })
+        url = CommonMethod().geturl(data, 'addEsssStoreHouseChange')
+        request = requests.post(url, data)
+        AssertEqual().add_assert_equal(request, '调拨单', self.p.get_storehouse_changeId())
 
-        api = self.Api['queryStdomSent']
-        digest = diggest_data(data, self.timestamp)
-        url = 'http://' + self.host + api + str(self.open_id) + '/' + str(self.timestamp) + '/' + digest + '/' + self.msg_id
-        request = requests.post(url=url, data=data)
-        request_data = json.loads(request.text)
-        try:
-            self.assertEqual(request.status_code, 200)
-            self.assertEqual(request_data['return_code'], '0')
-            self.log.info('订单发货（旺店发货）数据查询成功')
-        except Exception as e:
-            self.log.error('订单发货（旺店发货）数据查询失败:%s' % e)
-            self.log.error(request_data['return_msg'])
 
+
+
+if __name__ == '__main__':
+    unittest.main()
 
 
 if __name__ == '__main__':

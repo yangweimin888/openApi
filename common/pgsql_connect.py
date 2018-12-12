@@ -2,13 +2,12 @@
 # @Time   : 2018-11-06 15:26
 # @Author : YangWeiMin
 import psycopg2
-from config.get_databaseParm import database_parm
+from config.get_parm import GetParm
 
-
-class PgsqlUtil(object):
+class PgsqlUtil(GetParm):
 
     def __init__(self):
-        parm = database_parm()
+        parm = self.getDataBaseparm()
         self.host = parm['host']
         self.port = parm['port']
         self.user = parm['user']
@@ -103,3 +102,52 @@ class PgsqlUtil(object):
         sql = "SELECT id FROM esss_storehouse_out_bas ORDER BY create_time DESC LIMIT 1;"
         OutOtherOrderId = self.pgsql_getString(sql)
         return OutOtherOrderId
+
+
+    def get_creator_id(self):
+        """获取创建人id"""
+        sql = "SELECT id FROM sm_user WHERE code = 'yang';"
+        creator_id = self.pgsql_getString(sql)
+        return creator_id
+
+
+    def get_emp_code(self):
+        """获取业务员编码"""
+        sql = "SELECT code FROM sm_user WHERE code = 'yang';"
+        emp_code = self.pgsql_getString(sql)
+        return emp_code
+
+
+    def from_storehouse_code(self):
+        """获取转出仓库code"""
+        sql = "SELECT code FROM esss_storehouse WHERE name = '小杨专用仓库';"
+        storehouse_code = self.pgsql_getString(sql)
+        return storehouse_code
+
+
+    def to_storehouse_code(self):
+        """获取转入仓库code"""
+        sql = "SELECT code FROM esss_storehouse WHERE name = '小王专用仓库'; "
+        storehouse_code = self.pgsql_getString(sql)
+        return storehouse_code
+
+
+    def get_input_unit(self, code):
+        """根据商品code获取商品的基本单位id"""
+        sql = "select a.id from bas_pd_unit a JOIN bas_pd_product b ON a.pd_id = b.id WHERE b.code = '%s'" % code + " and is_base = '1';"
+        input_unit = self.pgsql_getString(sql)
+        return input_unit
+
+
+    def get_pd_id(self, code):
+        """根据商品code获取商品id"""
+        sql = "SELECT id FROM bas_pd_product WHERE code = '%s';" %code
+        pd_id = self.pgsql_getString(sql)
+        return pd_id
+
+
+    def get_pd_code(self, code):
+        """获取商品code"""
+        sql = "SELECT code FROM bas_pd_product WHERE code = '%s';" %code
+        pd_code = self.pgsql_getString(sql)
+        return pd_code

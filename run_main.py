@@ -77,19 +77,19 @@ def get_report_file(report_path):
 def send_mail(subject,sender,psw,receiver,smtpserver,report_file,port):
     """
     作用：将最新的测试报告通过邮件进行发送
-    :param sender:发件人
-    :param psw:QQ邮箱授权码
-    :param receiver:收件人
-    :param smtpserver:QQ邮箱服务
-    :param report_file:
-    :param port:端口
+    :param sender: 发件人
+    :param psw: QQ邮箱授权码
+    :param receiver: 收件人
+    :param smtpserver: QQ邮箱服务
+    :param report_file: 报告文件
+    :param port: 端口
     :return:
     """
     with open(report_file,"rb") as f:
         mail_body = f.read()
     # 定义邮件内容
     msg = MIMEMultipart()
-    body = MIMEText(mail_body,_subtype="html",_charset="utf-8")
+    body = MIMEText(mail_body, _subtype="html", _charset="utf-8")
     msg["Subject"] = subject
     msg["from"] = sender
     msg["to"] = ','.join(receiver)
