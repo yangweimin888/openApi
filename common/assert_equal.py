@@ -22,6 +22,7 @@ class AssertEqual(unittest.TestCase):
         :return:
         """
         request_data = json.loads(request.text)
+        print(request_data)
         try:
             self.assertEqual(request.status_code, 200)
             self.assertEqual(request_data['return_code'], '0')
@@ -41,12 +42,12 @@ class AssertEqual(unittest.TestCase):
         """
         request_data = json.loads(request.text)
         if request_data['response_data'] is None:
-            self.log.info('response_data 为空')
+            self.log.error(request_data['return_msg'])
         else:
             response = json.loads(request_data['response_data'])
             try:
 
-                    self.assertEqual(response['id'], str(bill_id))
+                    self.assertEqual(str(response['id']), str(bill_id))
                     self.assertEqual(request.status_code, 200)
                     self.assertEqual(request_data['return_code'], '0')
                     self.log.info('新增%s成功' % message)
@@ -54,3 +55,20 @@ class AssertEqual(unittest.TestCase):
                 self.log.error('新增%s失败:%s' % (message, e))
                 self.log.error(request_data['return_msg'])
 
+
+    def verify_assert_equal(self, request, message):
+        """
+        审批断言
+        :param request: 请求对象
+        :param message: 日志打印信息
+        :return:
+        """
+        request_data = json.loads(request.text)
+        try:
+            self.assertEqual(request.status_code, 200)
+            self.assertEqual(request_data['return_code'], '0')
+            self.assertEqual(request_data['msg_id'], 'KAIKAI123456')
+            self.log.info('%s审批成功' % message)
+        except Exception as e:
+            self.log.error('%s审批失败:%s' % (message, e))
+            self.log.error(request_data['return_msg'])

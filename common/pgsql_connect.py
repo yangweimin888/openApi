@@ -54,17 +54,18 @@ class PgsqlUtil(GetParm):
         sent_id = self.pgsql_getString(sql)
         return sent_id
 
-    def get_CmId(self):
+    def get_CmId(self ,code):
         '''获取客户id'''
-        sql = "SELECT id FROM bas_cm_customer WHERE name = '小杨专用经销商';"
+        sql = "SELECT id FROM bas_cm_customer WHERE code = '%s';" % code
         cm_id = self.pgsql_getString(sql)
         return cm_id
 
-    def get_CmCode(self):
+    def get_CmCode(self, name):
         '''获取客户code'''
-        sql = "SELECT code FROM bas_cm_customer WHERE name = '小杨专用经销商';"
+        sql = "SELECT code FROM bas_cm_customer WHERE name = '%s';" % name
         cm_code = self.pgsql_getString(sql)
         return cm_code
+
 
     def get_storehouse_changeId(self):
         '''获取调拨单id'''
@@ -72,11 +73,20 @@ class PgsqlUtil(GetParm):
         storehouse_changeId = self.pgsql_getString(sql)
         return storehouse_changeId
 
+
+    def get_storehouse_changeCode(self):
+        """获取调拨单单号"""
+        sql = "SELECT code  FROM esss_storehouse_change_bas ORDER BY create_time DESC LIMIT 1;"
+        storehouse_changeCode = self.pgsql_getString(sql)
+        return storehouse_changeCode
+
+
     def get_inventoryId(self):
         '''获取库存盘点单id'''
         sql = "SELECT id FROM esss_inventory_bas ORDER BY create_time DESC LIMIT 1;"
         inventory_id = self.pgsql_getString(sql)
         return inventory_id
+
 
     def get_car_exchangeId(self):
         '''获取兑换货物单据id'''
@@ -84,11 +94,13 @@ class PgsqlUtil(GetParm):
         car_exchangeId = self.pgsql_getString(sql)
         return car_exchangeId
 
+
     def get_car_InventoryId(self):
         '''获取车辆盘点单id'''
         sql = "SELECT id FROM esss_car_inventory_bas ORDER BY create_time DESC LIMIT 1;"
         car_InventoryId = self.pgsql_getString(sql)
         return car_InventoryId
+
 
     def get_InOtherOrderId(self):
         '''获取其他入库单id'''
@@ -104,32 +116,40 @@ class PgsqlUtil(GetParm):
         return OutOtherOrderId
 
 
-    def get_creator_id(self):
+    def get_creator_id(self, name):
         """获取创建人id"""
-        sql = "SELECT id FROM sm_user WHERE code = 'yang';"
+        sql = "SELECT id FROM sm_user WHERE name = '%s';" % name
         creator_id = self.pgsql_getString(sql)
         return creator_id
 
 
-    def get_emp_code(self):
+    def get_emp_code(self, code):
         """获取业务员编码"""
-        sql = "SELECT code FROM sm_user WHERE code = 'yang';"
+        sql = "SELECT code FROM sm_user WHERE code = '%s';" % code
         emp_code = self.pgsql_getString(sql)
         return emp_code
 
 
-    def from_storehouse_code(self):
+    def get_emp_name(self, code):
+        """获取员工姓名"""
+        sql = "select name from sm_user where code = '%s'" %code;
+        emp_name = self.pgsql_getString(sql)
+        return emp_name
+
+
+    def from_storehouse_code(self, name):
         """获取转出仓库code"""
-        sql = "SELECT code FROM esss_storehouse WHERE name = '小杨专用仓库';"
+        sql = "SELECT code FROM esss_storehouse WHERE name = '%s';" % name
         storehouse_code = self.pgsql_getString(sql)
         return storehouse_code
 
 
-    def to_storehouse_code(self):
+    def to_storehouse_code(self, name):
         """获取转入仓库code"""
-        sql = "SELECT code FROM esss_storehouse WHERE name = '小王专用仓库'; "
+        sql = "SELECT code FROM esss_storehouse WHERE name = '%s';" % name
         storehouse_code = self.pgsql_getString(sql)
         return storehouse_code
+
 
 
     def get_input_unit(self, code):
@@ -151,3 +171,17 @@ class PgsqlUtil(GetParm):
         sql = "SELECT code FROM bas_pd_product WHERE code = '%s';" %code
         pd_code = self.pgsql_getString(sql)
         return pd_code
+
+
+    def get_unit_name(self, code):
+        """获取单位名称"""
+        sql = "SELECT b.unit_name FROM bas_pd_product a JOIN bas_pd_unit b ON a.id = b.pd_id WHERE a.code = '%s'" %code + " and b.is_base = '1';"
+        pd_name = self.pgsql_getString(sql)
+        return pd_name
+
+
+    def get_car_code(self, name):
+        """获取车辆code"""
+        sql = "SELECT code FROM esss_storehouse WHERE name = '%s';" % name
+        car_code = self.pgsql_getString(sql)
+        return car_code

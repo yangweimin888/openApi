@@ -1,0 +1,79 @@
+2018-12-13 15:57:36,476 logger.py [36] INFO response_data 为空
+2018-12-13 15:59:03,584 logger.py [36] INFO 新增兑换货物单的时候客户在系统中不存在!
+2018-12-13 15:59:59,477 logger.py [42] ERROR 新增兑换货物单的时候客户在系统中不存在!
+2018-12-13 16:00:22,401 logger.py [42] ERROR 新增兑换货物单的时候客户在系统中不存在!
+2018-12-13 16:01:56,976 logger.py [42] ERROR 新增兑换货物单的时候客户在系统中不存在!
+2018-12-13 16:02:36,810 logger.py [42] ERROR 新增兑换货物单的时候客户在系统中不存在!
+2018-12-13 16:05:46,666 logger.py [36] INFO 查询旺店订单成功
+2018-12-13 16:06:28,486 logger.py [42] ERROR 新增兑换货物单的时候客户在系统中不存在!
+2018-12-13 16:07:07,924 logger.py [42] ERROR 新增兑换货物单的时候客户在系统中不存在!
+2018-12-13 16:11:29,094 logger.py [42] ERROR A10086中冰绿茶库存不足！不能兑换
+2018-12-13 16:11:51,518 logger.py [42] ERROR A10086中冰绿茶库存不足！不能兑换
+2018-12-13 16:50:29,973 logger.py [36] INFO 新增兑换货物成功
+2018-12-13 16:50:30,206 logger.py [42] ERROR 兑换货物审批失败:'0' != 0
+2018-12-13 16:50:30,209 logger.py [42] ERROR None
+2018-12-13 16:50:57,255 logger.py [36] INFO 新增兑换货物成功
+2018-12-13 16:50:57,345 logger.py [42] ERROR 兑换货物审批失败:'response_dat'
+2018-12-13 16:50:57,348 logger.py [42] ERROR None
+2018-12-13 16:52:48,073 logger.py [36] INFO 新增兑换货物成功
+2018-12-13 16:52:48,161 logger.py [36] INFO 兑换货物审批成功
+2018-12-13 17:08:03,417 logger.py [36] INFO 新增兑换货物成功
+2018-12-13 17:08:03,585 logger.py [36] INFO 兑换货物审批成功
+2018-12-13 17:08:03,887 logger.py [36] INFO 查询兑换货物成功
+2018-12-13 17:19:33,960 logger.py [36] INFO 新增兑换货物成功
+2018-12-13 17:19:34,108 logger.py [36] INFO 兑换货物审批成功
+2018-12-13 17:19:34,431 logger.py [36] INFO 查询兑换货物成功
+2018-12-13 17:19:34,512 logger.py [42] ERROR net.sf.json.JSONObject cannot be cast to java.io.Serializable
+2018-12-13 17:19:34,927 logger.py [42] ERROR None
+2018-12-13 17:23:13,053 logger.py [36] INFO 新增兑换货物成功
+2018-12-13 17:23:13,167 logger.py [36] INFO 兑换货物审批成功
+2018-12-13 17:23:13,442 logger.py [36] INFO 查询兑换货物成功
+2018-12-13 17:23:13,475 logger.py [42] ERROR net.sf.json.JSONObject cannot be cast to java.io.Serializable
+2018-12-13 17:23:13,534 logger.py [42] ERROR None
+2018-12-13 17:23:33,271 logger.py [36] INFO 新增兑换货物成功
+2018-12-13 17:23:34,030 logger.py [36] INFO 兑换货物审批成功
+2018-12-13 17:23:34,313 logger.py [36] INFO 查询兑换货物成功
+2018-12-13 17:23:34,358 logger.py [42] ERROR net.sf.json.JSONObject cannot be cast to java.io.Serializable
+2018-12-13 17:24:22,263 logger.py [36] INFO 新增兑换货物成功
+2018-12-13 17:24:22,342 logger.py [36] INFO 兑换货物审批成功
+2018-12-13 17:24:22,588 logger.py [36] INFO 查询兑换货物成功
+2018-12-13 17:24:22,631 logger.py [42] ERROR net.sf.json.JSONObject cannot be cast to java.io.Serializable
+2018-12-13 17:25:33,106 logger.py [36] INFO 新增兑换货物成功
+2018-12-13 17:25:33,188 logger.py [36] INFO 兑换货物审批成功
+2018-12-13 17:25:33,497 logger.py [36] INFO 查询兑换货物成功
+2018-12-13 17:25:33,542 logger.py [42] ERROR net.sf.json.JSONObject cannot be cast to java.io.Serializable
+2018-12-13 17:27:33,087 logger.py [42] ERROR net.sf.json.JSONObject cannot be cast to java.io.Serializable
+2018-12-13 17:31:37,652 logger.py [36] INFO 新增调拨单成功
+2018-12-13 17:32:34,546 logger.py [36] INFO 新增调拨单成功
+2018-12-13 17:32:53,862 logger.py [36] INFO 新增调拨单成功
+2018-12-13 17:32:53,995 logger.py [42] ERROR None
+2018-12-13 17:33:46,440 logger.py [36] INFO 新增调拨单成功
+2018-12-13 17:33:46,576 logger.py [42] ERROR None
+2018-12-13 17:34:51,327 logger.py [36] INFO 新增调拨单成功
+2018-12-13 17:34:51,439 logger.py [42] ERROR None
+2018-12-13 17:40:47,317 logger.py [36] INFO 新增调拨单成功
+2018-12-13 17:40:47,437 logger.py [36] INFO 调拨单审批成功
+2018-12-13 19:06:17,687 logger.py [36] INFO 查询调拨单成功
+2018-12-13 19:06:39,279 logger.py [36] INFO 查询调拨单成功
+2018-12-13 19:11:55,707 logger.py [36] INFO 查询调拨单成功
+2018-12-13 19:12:17,429 logger.py [36] INFO 查询调拨单成功
+2018-12-13 19:28:09,347 logger.py [42] ERROR JSONObject["remarks"] not found.
+2018-12-13 19:28:51,084 logger.py [42] ERROR 新增库存盘点单的排序号不能为空!
+2018-12-13 19:34:17,134 logger.py [42] ERROR 新增库存盘点单失败:9213909207830783877 != '9213909207830783877'
+2018-12-13 19:34:17,135 logger.py [42] ERROR None
+2018-12-13 19:35:35,320 logger.py [36] INFO 新增调拨单成功
+2018-12-13 19:35:35,412 logger.py [42] ERROR 新增库存盘点单失败:8705373175807856324 != '8705373175807856324'
+2018-12-13 19:35:35,416 logger.py [42] ERROR None
+2018-12-13 19:39:12,076 logger.py [36] INFO 新增调拨单成功
+2018-12-13 19:39:12,204 logger.py [42] ERROR 新增库存盘点单失败:8312822673720406937 != '8312822673720406937'
+2018-12-13 19:39:12,206 logger.py [42] ERROR None
+2018-12-13 19:39:39,323 logger.py [36] INFO 新增调拨单成功
+2018-12-13 19:39:39,425 logger.py [42] ERROR 新增库存盘点单失败:6373809998206718001 != '6373809998206718001'
+2018-12-13 19:39:39,426 logger.py [42] ERROR None
+2018-12-13 19:40:32,952 logger.py [36] INFO 新增调拨单成功
+2018-12-13 19:40:33,038 logger.py [36] INFO 新增库存盘点单成功
+2018-12-13 20:01:01,699 logger.py [36] INFO 新增库存盘点单成功
+2018-12-13 20:01:02,002 logger.py [36] INFO 库存盘点单审批成功
+2018-12-13 20:14:54,159 logger.py [36] INFO 新增车辆盘点单成功
+2018-12-13 20:24:43,632 logger.py [36] INFO 新增车辆盘点单成功
+2018-12-13 20:24:43,707 logger.py [36] INFO 车辆盘点单审批成功
