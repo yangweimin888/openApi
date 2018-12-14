@@ -22,7 +22,6 @@ class AssertEqual(unittest.TestCase):
         :return:
         """
         request_data = json.loads(request.text)
-        print(request_data)
         try:
             self.assertEqual(request.status_code, 200)
             self.assertEqual(request_data['return_code'], '0')
