@@ -33,6 +33,7 @@ class PgsqlUtil(GetParm):
             cur.close()
             return rows
 
+
     def pgsql_getString(self,sql):
         '''查询某个字段的对应值'''
         rows = self.pgsql_execute(sql)
@@ -48,17 +49,20 @@ class PgsqlUtil(GetParm):
         esss_id = self.pgsql_getString(sql)
         return esss_id
 
+
     def get_stdOrderSent(self):
         '''获取发货单id'''
         sql = "SELECT id from std_order_sent ORDER BY create_time DESC LIMIT 1;"
         sent_id = self.pgsql_getString(sql)
         return sent_id
 
+
     def get_CmId(self ,code):
         '''获取客户id'''
         sql = "SELECT id FROM bas_cm_customer WHERE code = '%s';" % code
         cm_id = self.pgsql_getString(sql)
         return cm_id
+
 
     def get_CmCode(self, name):
         '''获取客户code'''
@@ -149,7 +153,6 @@ class PgsqlUtil(GetParm):
         sql = "SELECT code FROM esss_storehouse WHERE name = '%s';" % name
         storehouse_code = self.pgsql_getString(sql)
         return storehouse_code
-
 
 
     def get_input_unit(self, code):
