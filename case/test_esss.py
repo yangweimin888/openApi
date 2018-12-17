@@ -106,6 +106,7 @@ class Esss(unittest.TestCase):
         """新增库存盘点单"""
         data = json.dumps({
             'emp_code': self.p.get_emp_code('yang'),
+            'emp_name': self.p.get_emp_name('yang'),
             'inventory_status': '1',
             'inventory_type': '2',
             'date': self.local_day,
