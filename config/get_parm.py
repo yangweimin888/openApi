@@ -27,8 +27,8 @@ class GetParm(object):
         return database_parm
 
 
-    def getTenantParm(self):
+    def getTenantParm(self, name):
         """获取企业参数"""
         tenant_parm = self.openParmFile('tenant_parm.yaml')
-        return tenant_parm
+        return tenant_parm[name]
 

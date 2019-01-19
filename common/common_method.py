@@ -19,7 +19,7 @@ class CommonMethod(GetParm):
         :param timestamp: 时间戳
         :return: 返回一个加密后的对象
         """
-        appkey = self.getTenantParm()['appkey']
+        appkey = self.getTenantParm('test')['appkey']
         key = request_data + '|' + appkey + '|' + timestamp
         digest = hashlib.md5(key.encode('UTF-8')).hexdigest()
         return digest
@@ -63,10 +63,10 @@ class CommonMethod(GetParm):
 
     def geturl(self, request_data, api_name):
         """拼接url地址"""
-        host = self.getTenantParm()['host']
+        host = self.getTenantParm('test')['host']
         timestamp = self.time_stamp()
-        open_id = self.getTenantParm()['open_id']
-        msg_id = GetParm().getTenantParm()['msg_id']
+        open_id = self.getTenantParm('test')['open_id']
+        msg_id = GetParm().getTenantParm('test')['msg_id']
         api = self.Api[api_name]
         digest = self.diggest_data(request_data, timestamp)
         url = 'http://' + host + api + str(open_id) + '/' + str(timestamp) + '/' + digest + '/' + msg_id
