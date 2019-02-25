@@ -188,3 +188,16 @@ class PgsqlUtil(GetParm):
         sql = "SELECT code FROM esss_storehouse WHERE name = '%s';" % name
         car_code = self.pgsql_getString(sql)
         return car_code
+
+
+    def get_account(self, name):
+        """获取账户信息"""
+        sql = "select name from esss_account where name = '%s';" % name
+        account_name = self.pgsql_getString(sql)
+        return account_name
+
+
+    def get_esss_receive_id(self):
+        sql = "SELECT id FROM esss_receivable_history_bas ORDER BY create_time DESC LIMIT 1;"
+        receive_id = self.pgsql_getString(sql)
+        return receive_id
