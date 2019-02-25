@@ -55,4 +55,7 @@ queryStdomSent: /api/stdsent/v1/queryStdomSent/
 # 查询车销单数据
 queryCarSaleOrder: /api/stdcarsle/v2/queryCarSaleOrder/
 
+# 收款单新增
+addEsssReceive: /esssReceivableHistory/v1/addEsssReceive/
+
 
