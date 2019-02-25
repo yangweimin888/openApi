@@ -278,5 +278,18 @@ class Esss(unittest.TestCase):
         AssertEqual().query_assert_equal(request, '车销单')
 
 
+    def test_18(self):
+        """收款单新增接口"""
+        data = json.dumps({
+            'cm_code': self.p.get_CmCode('小杨专用经销商'),
+            'receive_amount': '200',
+            'emp_code': self.p.get_emp_code('yang'),
+            'account': self.p.get_account('小杨账户2')
+        })
+        url = CommonMethod().geturl(data, 'addEsssReceive')
+        request = requests.post(url, data)
+        AssertEqual().add_assert_equal(request, '收款单', self.p.get_esss_receive_id())
+
+
 if __name__ == '__main__':
     unittest.main()
