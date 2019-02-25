@@ -56,6 +56,6 @@ queryStdomSent: /api/stdsent/v1/queryStdomSent/
 queryCarSaleOrder: /api/stdcarsle/v2/queryCarSaleOrder/
 
 # 收款单新增
-addEsssReceive: /esssReceivableHistory/v1/addEsssReceive/
+addEsssReceive: /api/esssReceivableHistory/v1/addEsssReceive/
 
 
