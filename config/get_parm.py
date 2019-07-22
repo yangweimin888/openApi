@@ -7,14 +7,12 @@ import yaml
 
 class GetParm(object):
 
-
     def openParmFile(self, path):
         """公共方法，读取参数文件"""
         self.parm_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), path)
         with open(self.parm_path, 'r', encoding='utf-8') as f:
-            data = yaml.load(f)
+            data = yaml.load(f, Loader=yaml.FullLoader)
             return data
-
 
     def getApiParm(self):
         """获取接口数据"""
@@ -26,9 +24,7 @@ class GetParm(object):
         database_parm = self.openParmFile('database_parm.yaml')
         return database_parm
 
-
     def getTenantParm(self, name):
         """获取企业参数"""
         tenant_parm = self.openParmFile('tenant_parm.yaml')
         return tenant_parm[name]
-

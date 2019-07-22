@@ -17,7 +17,6 @@ class Order(unittest.TestCase):
     p = PgsqlUtil()
     Api = GetParm().getApiParm()
 
-
     def test_01(self):
         """查询旺店订单"""
         data = json.dumps({

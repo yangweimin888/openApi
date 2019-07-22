@@ -11,6 +11,7 @@ log_path = os.path.join(os.path.dirname(cur_path),'logs')
 
 if not os.path.exists(log_path):os.mkdir(log_path)
 
+
 class Log(object):
     """编写日志公共方法"""
 

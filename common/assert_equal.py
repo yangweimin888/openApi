@@ -13,7 +13,6 @@ class AssertEqual(unittest.TestCase):
     log = Log()
     p = PgsqlUtil()
 
-
     def query_assert_equal(self, request, message):
         """
         查询断言
@@ -29,7 +28,6 @@ class AssertEqual(unittest.TestCase):
         except Exception as e:
             self.log.error('查询%s失败:%s' % (message, e))
             self.log.error(request_data['return_msg'])
-
 
     def add_assert_equal(self, request, message, bill_id):
         """
@@ -53,7 +51,6 @@ class AssertEqual(unittest.TestCase):
             except Exception as e:
                 self.log.error('新增%s失败:%s' % (message, e))
                 self.log.error(request_data['return_msg'])
-
 
     def verify_assert_equal(self, request, message):
         """

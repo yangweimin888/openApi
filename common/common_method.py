@@ -4,13 +4,11 @@
 import hashlib
 from config.get_parm import GetParm
 import time
-import json
 
 
 class CommonMethod(GetParm):
     """程序中用到的公共方法"""
     Api = GetParm().getApiParm()
-
 
     def diggest_data(self, request_data, timestamp):
         """
@@ -51,16 +49,6 @@ class CommonMethod(GetParm):
         local_min = time.strftime('%Y-%m-%d %H:%m')
         return local_min
 
-
-    # def request_data(self, **kwargs):
-    #     """将字典格式的请求参数转换成json格式"""
-    #     for key, value in kwargs.items():
-    #         data = json.dumps({
-    #             key: value
-    #         })
-    #         return data
-
-
     def geturl(self, request_data, api_name):
         """拼接url地址"""
         host = self.getTenantParm('test')['host']
@@ -71,6 +59,3 @@ class CommonMethod(GetParm):
         digest = self.diggest_data(request_data, timestamp)
         url = 'http://' + host + api + str(open_id) + '/' + str(timestamp) + '/' + digest + '/' + msg_id
         return url
-
-
-

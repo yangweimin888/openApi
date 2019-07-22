@@ -4,6 +4,7 @@
 import psycopg2
 from config.get_parm import GetParm
 
+
 class PgsqlUtil(GetParm):
 
     def __init__(self):
@@ -33,7 +34,6 @@ class PgsqlUtil(GetParm):
             cur.close()
             return rows
 
-
     def pgsql_getString(self,sql):
         '''查询某个字段的对应值'''
         rows = self.pgsql_execute(sql)
@@ -42,20 +42,17 @@ class PgsqlUtil(GetParm):
                 for i in row:
                     return i
 
-
     def get_esssCarSaleBasId(self):
         '''获取车销单最新id'''
         sql = " SELECT id FROM esss_car_sale_bas ORDER BY create_time DESC LIMIT 1;"
         esss_id = self.pgsql_getString(sql)
         return esss_id
 
-
     def get_stdOrderSent(self):
         '''获取发货单id'''
         sql = "SELECT id from std_order_sent ORDER BY create_time DESC LIMIT 1;"
         sent_id = self.pgsql_getString(sql)
         return sent_id
-
 
     def get_CmId(self ,code):
         '''获取客户id'''

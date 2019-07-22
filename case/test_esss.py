@@ -18,7 +18,6 @@ class Esss(unittest.TestCase):
     p = PgsqlUtil()
     Api = GetParm().getApiParm()
 
-
     def test_01(self):
         """新增兑换货物"""
         data = json.dumps({
@@ -34,7 +33,6 @@ class Esss(unittest.TestCase):
         request = requests.post(url, data)
         AssertEqual().add_assert_equal(request, '兑换货物', self.p.get_car_exchangeId())
 
-
     def test_02(self):
         """审批兑换货物"""
         data = json.dumps({
@@ -46,7 +44,6 @@ class Esss(unittest.TestCase):
         request = requests.post(url, data)
         AssertEqual().verify_assert_equal(request, '兑换货物')
 
-
     def test_03(self):
         """查询兑换货物"""
         data = json.dumps({
@@ -56,7 +53,6 @@ class Esss(unittest.TestCase):
         url = CommonMethod().geturl(data, 'queryEsssExChangeProduct')
         request = requests.post(url, data)
         AssertEqual().query_assert_equal(request, '兑换货物')
-
 
     def test_04(self):
         """新增调拨单"""
@@ -77,7 +73,6 @@ class Esss(unittest.TestCase):
         request = requests.post(url, data)
         AssertEqual().add_assert_equal(request, '调拨单', self.p.get_storehouse_changeId())
 
-
     def test_05(self):
         """审批调拨单"""
         data = json.dumps({
@@ -89,7 +84,6 @@ class Esss(unittest.TestCase):
         request = requests.post(url, data)
         AssertEqual().verify_assert_equal(request, '调拨单')
 
-
     def test_06(self):
         """查询调拨单"""
         data = json.dumps({
@@ -100,7 +94,6 @@ class Esss(unittest.TestCase):
         url = CommonMethod().geturl(data, 'queryEsssStoreHouseChange')
         request = requests.post(url, data)
         AssertEqual().query_assert_equal(request, '调拨单')
-
 
     def test_07(self):
         """新增库存盘点单"""
@@ -122,7 +115,6 @@ class Esss(unittest.TestCase):
         request = requests.post(url, data)
         AssertEqual().add_assert_equal(request, '库存盘点单', self.p.get_inventoryId())
 
-
     def test_08(self):
         """审核库存盘点单"""
         data = json.dumps({
@@ -131,7 +123,6 @@ class Esss(unittest.TestCase):
         url = CommonMethod().geturl(data, 'verifyEsssInventory')
         request = requests.post(url, data)
         AssertEqual().verify_assert_equal(request, '库存盘点单')
-
 
     def test_09(self):
         """新增车辆盘点单"""
@@ -153,7 +144,6 @@ class Esss(unittest.TestCase):
         request = requests.post(url, data)
         AssertEqual().add_assert_equal(request, '车辆盘点单', self.p.get_car_InventoryId())
 
-
     def test_10(self):
         """审核车辆盘点单"""
         data = json.dumps({
@@ -162,7 +152,6 @@ class Esss(unittest.TestCase):
         url = CommonMethod().geturl(data, 'verifyEsssCarInventory')
         request = requests.post(url, data)
         AssertEqual().verify_assert_equal(request, '车辆盘点单')
-
 
     def test_11(self):
         """查询其他入库单"""
@@ -174,7 +163,6 @@ class Esss(unittest.TestCase):
         url = CommonMethod().geturl(data, 'queryInOtherOrder')
         request = requests.post(url, data)
         AssertEqual().query_assert_equal(request, '其他入库单')
-
 
     def test_12(self):
         """新增其他入库单"""
@@ -202,7 +190,6 @@ class Esss(unittest.TestCase):
         request = requests.post(url, data)
         AssertEqual().add_assert_equal(request, '其他入库单', self.p.get_InOtherOrderId())
 
-
     def test_13(self):
         """审核其他入库单"""
         data = json.dumps({
@@ -212,7 +199,6 @@ class Esss(unittest.TestCase):
         url = CommonMethod().geturl(data, 'verifyInOtherOrder')
         request = requests.post(url, data)
         AssertEqual().verify_assert_equal(request, '其他入库单')
-
 
     def test_14(self):
         """查询其他出库单"""
@@ -225,7 +211,6 @@ class Esss(unittest.TestCase):
         url = CommonMethod().geturl(data, 'queryOutOtherOrder')
         request = requests.post(url, data)
         AssertEqual().query_assert_equal(request, '其他出库单')
-
 
     def test_15(self):
         """新增其他出库单"""
@@ -253,7 +238,6 @@ class Esss(unittest.TestCase):
         request = requests.post(url, data)
         AssertEqual().add_assert_equal(request, '其他出库单', self.p.get_OutOtherOrderId())
 
-
     def test_16(self):
         """审批其他出库单"""
         data = json.dumps({
@@ -263,7 +247,6 @@ class Esss(unittest.TestCase):
         url = CommonMethod().geturl(data, 'verifyOutOtherOrder')
         request = requests.post(url, data)
         AssertEqual().verify_assert_equal(request, '其他出库单')
-
 
     def test_17(self):
         """查询车销单"""
@@ -276,7 +259,6 @@ class Esss(unittest.TestCase):
         url = CommonMethod().geturl(data, 'queryCarSaleOrder')
         request = requests.post(url, data)
         AssertEqual().query_assert_equal(request, '车销单')
-
 
     def test_18(self):
         """收款单新增接口"""
